@@ -14,38 +14,25 @@
 - Source repository - [https://github.com/mikevoxcap/pluralsight-camel-intro/](https://github.com/mikevoxcap/pluralsight-camel-intro/)
 
 ## Overview
-This is the installation guide for setting up the order fulfillment processor application that acts as the case study for 
-Pluralsight's Introduction to Integration with Apache Camel. The case study is a custom implementation of a mediator. You 
-will be able to follow along with the course using this case study project as the base for demonstrations.
+This is the installation guide for setting up the order fulfillment processor application that acts as the case study for Pluralsight's Introduction to Integration with Apache Camel. The case study is a custom implementation of a mediator. You will be able to follow along with the course using this case study project as the base for demonstrations.
 
 ## System requirements
 
 The case study was developed using the following:
 
-- Windows 8, 64-bit
+- Windows 8, 64-bit/ Ubuntu 14.04
 - IntelliJ Idea
 - JDK 1.7.0_45
 - Maven 3.0.3
 - Spring 4
 - PostgreSQL 9.3
 - Wildfly 8.1.0.Final
-- Apache ActiveMQ 5.10.0
-- Apache Camel 2.13.2
-- Hawt.io 1.4.14
 
 ## Server deployment
 
-Below are the instructions on a per-component basis. The installation assumes Windows, so you will need to follow the instructions 
-that pertain to your OS if you are not using Windows.
+Below are the instructions on a per-component basis. The installation assumes Windows, so you will need to follow the instructions that pertain to your OS if you are not using Windows.
 
 ### PostgreSQL Database import
-
-I chose to use PostgreSQL for the project's database. PostgreSQL is a free, open-source database. PostgreSQL can be 
-downloaded from the following URL:
-
-   http://www.postgresql.org/download/windows/
-
-The installation should include PGAdmin III, which is a graphical editor for PostgreSQL.
 
 The scripts to create the database for the case study project can be found in the project directory:
 
@@ -53,27 +40,27 @@ The scripts to create the database for the case study project can be found in th
 
 Scripts include:
 
-..* create-orders-db.sql = Creates the login, database and schema for the project.
-..* create-orders.sql = Drops and re-creates the database table schema
-..* drop-orders-db.sql = Drops the orders database
+- create-orders-db.sql = Creates the login, database and schema for the project.
+- create-orders.sql = Drops and re-creates the database table schema
+- drop-orders-db.sql = Drops the orders database
 
 The script to load initial data can be found in the project directory:
 
-   order-fulfillment-processor\src\main\sql\postgresql\dml\load-orders.sql
+- order-fulfillment-processor\src\main\sql\postgresql\dml\load-orders.sql
 	
 To initially create the database:
 
-1. Log in to PGAdmin III and connect using the postgres user
-2. Create the login for orders using the create statement found in create-orders-db.sql
-3. Create the database for orders using the create statement found in create-orders-db.sql
-4. Disconnect from the server, then right click the database, select properties and enter the user name as orders.
-5. Connect to the server using the orders user name. 
-6. Open the query tool and run the create-orders.sql file, then run the load-orders.sql file.
+1. Log in to `PGAdmin III` or `phppgadmin` and connect using the `postgres` user
+2. Create the login for orders using the create statement found in `create-orders-db.sql`
+3. Create the database for orders using the create statement found in `create-orders-db.sql
+4. Disconnect from the server, then right click the database, select properties and enter the user name as `orders` and password as `orders`.
+5. Connect to the server using the `orders` user name. 
+6. Open the query tool and run the `create-orders.sql` file, then run the `load-orders.sql` file.
 
 To re-load the database:
 
-1. Log in to PGAdmin III and connect using the orders user
-2. Open the query tool and run the create-orders.sql file, then run the load-orders.sql file.
+1. Log in to `PGAdmin III` or `phppgadmin` and connect using the `orders` user
+2. Open the query tool and run the `create-orders.sql` file, then run the `load-orders.sql file`
 
 ### Start Wildfly
 1. Open a command line and navigate to the root of the Wildfly directory.
