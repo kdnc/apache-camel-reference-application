@@ -87,18 +87,44 @@ To re-load the database:
 
 ## Tests
 
-### Test scenario 1 - "scott" user should be able to login
+### Test scenario 1 - View home page
 
 1. Navigate to the following url.       
-<http://localhost:8080/ldap-authentication/>
-2. You should be redirected to the <http://localhost:8080/ofp/orderHome> page.
-3. Login to the application with following credentials:
-	* username - scott
-	* password - wombat
-4. You should be able to successfully login and the welcome page should be displayed.
+<http://localhost:8080/ofp/orderHome/>
+2. You should see a page with following text.
+
+		Order Fulfillment Management
+		Supporting various pages devoted to order fulfillment management.
+
+### Test scenario 2 - Reset orders
+
+1. Navigate to the following url.       
+<http://localhost:8080/ofp/orderHome/>
+2. Click following link in menu. Orders -> Reset Orders
+3. You should see a page with following text.
+
+		Reset Orders
+		Clicking the button below will reset the order statuses of all orders to new.
+4. Click the button "Click Me!".
+5. Page should be reloaded and it should display a list of orders in a table with the Status of "New".
+
+### Test scenario 3 - Process orders
+
+1. Navigate to the following url.       
+<http://localhost:8080/ofp/orderHome/>
+2. Click following link in menu. Orders -> Process Orders
+3. You should see a page with following text.
+
+		Process Orders Orders
+		Click the button below to run order fulfillment processing.
+4. Click the button "Click Me!".
+5. Page should be reloaded and it should display a list of orders in a table. First 5 orders should display with the Status of "Processing".
 
 
+### Test scenario 4 - View orders
 
-If you want to run order processing, click Orders -> Process Orders
-
-If you want to reset the orders back to new status, click Orders -> Reset Orders
+1. Follow "Test scenario 3 - Process orders"
+1. Navigate to the following url.       
+<http://localhost:8080/ofp/orderHome/>
+2. Click following link in menu. Orders -> View Orders
+5. Page should display a list of orders in a table. First 5 orders should display with the Status of "Processing".
