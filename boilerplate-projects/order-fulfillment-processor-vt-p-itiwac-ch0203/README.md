@@ -85,67 +85,20 @@ To re-load the database:
 
         mvn wildfly:undeploy
 
-### Apache Tomcat
+## Tests
 
-I used Apache Tomcat 7.0.54 as a server runtime in Eclipse. Below are instructions for adding the runtime in Eclipse:
+### Test scenario 1 - "scott" user should be able to login
 
-1. Download Tomcat 7 from http://tomcat.apache.org/
-2. Unzip the file to a directory on your hard drive
-3. In Eclipse, click the Window -> Preference menu and then select Server -> Runtime Environments from the Preferences popup
-4. Click the Add button.
-5. Select Tomcat 7 and click next
-6. Enter the installation directory you unzipped Tomcat to and click Finish
+1. Navigate to the following url.       
+<http://localhost:8080/ldap-authentication/>
+2. You should be redirected to the <http://localhost:8080/ofp/orderHome> page.
+3. Login to the application with following credentials:
+	* username - scott
+	* password - wombat
+4. You should be able to successfully login and the welcome page should be displayed.
 
-### Apache ActiveMQ
 
-I used Apache ActiveMQ 5.10.0 for messaging. Below are instructions for installation:
-
-1. Download ActiveMQ 5.10 from http://activemq.apache.org/
-2. Unzip the file to a directory on your hard drivev
-3. Open a command prompt and navigate to the bin directory of the activemq installation you unzipped
-4. Run the command activemq.bat start
-5. Verify the broker started by navigating to http://localhost:8161/ and logging in with admin/admin
-
-### Hawt.io
-
-I used Hawt.io version 1.4.14. Below are instructions for installation:
-
-1. Downloaded Hawt.io 1.4.14 WAR file from http://hawt.io/
-2. In Eclipse, I selected the File -> import menu, then selected Web -> WAR
-3. I selected the hawt.io WAR file I downloaded and then selected next
-4. I kept all the selections unchecked and clicked finish to import the WAR.
-5. I added the project to Tomcat in Eclipse
-6. You can then verify the installation from http://localhost:8080/hawtio-default-1.4.14
-
-### Order Fulfillment Project Installation
-
-Below are instructions for getting the Order Fulfillment Processor running in Eclipse:
-
-1. In Eclipse, select File -> Import and select Maven -> Existing Maven Projects
-2. Enter the root directory of the project then make sure the pom.xml file is checked. Click Next and then click Finish
-3. Make sure the project is faceted as a Maven project
-4. Right click the project and select Properties
-5. Click Project Facets in the pop-up and then click the convert to faceted project link if not already in faceted form.
-6. Make sure Dynamic Web Module 3.0 is checked
-7. Make sure Java 1.7 is checked
-8. Click OK to close the properties popup, then right-click the project and select Properties again. 
-9. There should now be a Deployment Assembly selection, which you should select.
-10. Make sure that /src/main/java/ and /src/main/resources are deployed to WEB-INF/classes
-11. Remove the /WebContent to / entry
-12. Add the java build path entry Maven Dependencies and make sure it deploys to WEB-INF/lib
-13. Add the /src/main/webapp folder and make sure it deploys to /
-14. Click OK to close the properties window
-15. Add the project to the Tomcat 7 server and start the server.
-16. Once the server is started, open a browser to http://localhost:8080/order-fulfillment-processor/orderHome
 
 If you want to run order processing, click Orders -> Process Orders
 
 If you want to reset the orders back to new status, click Orders -> Reset Orders
-
-## Contact Information
-
-If you have any questions, please feel free to contact me:
-
-Michael Hoffman
-mike@michaelhoffmaninc.com
-@mhi_inc
