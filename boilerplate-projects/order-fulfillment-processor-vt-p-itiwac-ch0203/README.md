@@ -87,6 +87,10 @@ To re-load the database:
 
 ## Tests
 
+### Test scenarios demo video
+
+[https://youtu.be/jGTFzCXVB5I](https://youtu.be/jGTFzCXVB5I)
+
 ### Test scenario 1 - View home page
 
 1. Navigate to the following url.       
