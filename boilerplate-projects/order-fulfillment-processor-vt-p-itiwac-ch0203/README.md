@@ -30,6 +30,11 @@ The case study was developed using the following:
 
 ## Server deployment
 
+### Server deployment demo videos
+
+- [PostgreSQL Database import](https://youtu.be/g3bOEUc01_o)
+- [Wildfly server deployment](https://www.youtube.com/watch?v=K-SMhqBenIc)
+
 Below are the instructions on a per-component basis. The installation assumes Windows, so you will need to follow the instructions that pertain to your OS if you are not using Windows.
 
 ### PostgreSQL Database import
@@ -86,6 +91,10 @@ To re-load the database:
         mvn wildfly:undeploy
 
 ## Tests
+
+### Test scenarios demo video
+
+[https://youtu.be/jGTFzCXVB5I](https://youtu.be/jGTFzCXVB5I)
 
 ### Test scenario 1 - View home page
 
