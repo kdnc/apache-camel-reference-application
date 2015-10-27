@@ -28,6 +28,63 @@ The case study was developed using the following:
 - PostgreSQL 9.3
 - Wildfly 8.1.0.Final
 
+## Important code blocks
+
+- pom.xml
+	- Added Camel libraries
+
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-spring</artifactId>
+				<version>2.13.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-spring-javaconfig</artifactId>
+				<version>2.13.2</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-test-spring</artifactId>
+				<version>2.13.2</version>
+				<scope>test</scope>
+			</dependency>
+
+- src\main\java\com\pluralsight\orderfulfillment\config\IntegrationConfig.java
+	- Configure Camel context
+	- Add Camel routes
+
+			@Configuration
+			public class IntegrationConfig extends CamelConfiguration {
+			   @Inject
+			   private Environment environment;
+			   @Override
+			   public List<RouteBuilder> routes() {
+			      List<RouteBuilder> routeList = new ArrayList<RouteBuilder>();
+			      routeList.add(new RouteBuilder() {
+			         @Override
+			         public void configure() throws Exception {
+			            from(
+			                  "file://"
+			                        + environment
+			                              .getProperty("order.fulfillment.center.1.outbound.folder")
+			                        + "?noop=true")
+			                  .to("file://"
+			                        + environment
+			                              .getProperty("order.fulfillment.center.1.outbound.folder")
+			                        + "/test");
+			         }
+			      });
+			      return routeList;
+			   }
+			}
+	
+## Project notes
+
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/feature/routing_routing-basics/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-002.jpg)
+
+
 ## Server deployment
 
 ### Server deployment demo videos
