@@ -13,7 +13,9 @@
 - Resource - [PluralSight] Introduction to Integration With Apache Camel (Feb 19, 2015) - 03. Routing From a Database - 03_09-Routing Rule Implementation
 
 ## Overview
-How to configure a camel route from database to log file
+How to configure a camel route from database to log file.
+
+SQL Component instance used for routing orders from the orders database and updating the orders database. Camel RouteBuilder for routing orders from the orders database. Routes any orders with status set to new, then updates the order status to be in process. The route sends the message exchange to a log component.
 
 ## System requirements
 
