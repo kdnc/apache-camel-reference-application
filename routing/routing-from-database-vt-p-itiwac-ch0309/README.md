@@ -10,11 +10,10 @@
 **[Tests](#tests)**  
 
 ## Resource location
-- Resource - [PluralSight] Introduction to Integration With Apache Camel (Feb 19, 2015) - 02. Getting Started With Apache Camel - 02_10-Configuring a Camel Route
-- Source repository - [https://github.com/mikevoxcap/pluralsight-camel-intro/](https://github.com/mikevoxcap/pluralsight-camel-intro/)
+- Resource - [PluralSight] Introduction to Integration With Apache Camel (Feb 19, 2015) - 03. Routing From a Database - 03_09-Routing Rule Implementation
 
 ## Overview
-How to configure a camel route
+How to configure a camel route from database to log file
 
 ## System requirements
 
@@ -31,54 +30,55 @@ The case study was developed using the following:
 ## Important code blocks
 
 - pom.xml
-	- Added Camel libraries
+	- Added Camel sql libraries
 
 			<dependency>
 				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-spring</artifactId>
-				<version>2.13.2</version>
+				<artifactId>camel-sql</artifactId>
+				<version>2.13.2</version>	
 			</dependency>
+	
+	- Added derby library for embedded database used in testing			
+
 			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-spring-javaconfig</artifactId>
-				<version>2.13.2</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>org.apache.camel</groupId>
-				<artifactId>camel-test-spring</artifactId>
-				<version>2.13.2</version>
+				<groupId>org.apache.derby</groupId>
+				<artifactId>derby</artifactId>
+				<version>10.10.2.0</version>
 				<scope>test</scope>
 			</dependency>
 
 - src\main\java\com\pluralsight\orderfulfillment\config\IntegrationConfig.java
-	- Configure Camel context
-	- Add Camel routes
+	- Camel components
+			@Bean
+		   public org.apache.camel.component.sql.SqlComponent sql() {
+		      org.apache.camel.component.sql.SqlComponent sqlComponent = new org.apache.camel.component.sql.SqlComponent();
+		      sqlComponent.setDataSource(dataSource);
+		      return sqlComponent;
+		   }
 
-			@Configuration
-			public class IntegrationConfig extends CamelConfiguration {
-			   @Inject
-			   private Environment environment;
-			   @Override
-			   public List<RouteBuilder> routes() {
-			      List<RouteBuilder> routeList = new ArrayList<RouteBuilder>();
-			      routeList.add(new RouteBuilder() {
-			         @Override
-			         public void configure() throws Exception {
-			            from(
-			                  "file://"
-			                        + environment
-			                              .getProperty("order.fulfillment.center.1.outbound.folder")
-			                        + "?noop=true")
-			                  .to("file://"
-			                        + environment
-			                              .getProperty("order.fulfillment.center.1.outbound.folder")
-			                        + "/test");
-			         }
-			      });
-			      return routeList;
-			   }
-			}
+	- Routing rule implementation
+
+		   @Bean
+		   public org.apache.camel.builder.RouteBuilder newWebsiteOrderRoute() {
+		      return new org.apache.camel.builder.RouteBuilder() {
+		
+		         @Override
+		         public void configure() throws Exception {
+		            // Send from the SQL component to the Log component.
+		            from(
+		                  "sql:"
+		                        + "select id from orders.\"order\" where status = '"
+		                        + OrderStatus.NEW.getCode()
+		                        + "'"
+		                        + "?"
+		                        + "consumer.onConsume=update orders.\"order\" set status = '"
+		                        + OrderStatus.PROCESSING.getCode()
+		                        + "' where id = :#id").to(
+		                  "log:com.pluralsight.orderfulfillment.order?level=INFO");
+		         }
+		      };
+		   }
+			
 	
 ## Project notes
 
@@ -92,27 +92,31 @@ The case study was developed using the following:
 
 ![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-006.jpg)
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-007.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-002.jpg)
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-008.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-003.jpg)
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-009.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-004.jpg)
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-010.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-005.jpg)
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-011.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-006.jpg)
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-012.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-007.jpg)
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-013.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-008.jpg)
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-014.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-009.jpg)
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-015.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-010.jpg)
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-016.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-011.jpg)
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/2-apache-camel-intro-integration-m2-slides-page-017.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-012.jpg)
+
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-013.jpg)
+
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-basics-vt-p-itiwac-ch0210/etc/3-apache-camel-intro-integration-m3-slides-page-014.jpg)
 
 ## Server deployment
 
@@ -180,14 +184,4 @@ To re-load the database:
 
 ### Test scenarios demo video
 
-[https://youtu.be/Z1gpG5TOKzM](https://youtu.be/Z1gpG5TOKzM)
-
-### Test scenario 1 - Created .csv file in outbound folder should be again copied to test folder inside outbound folder 
-
-1. Open `C:\nuwan\dev\order-fulfillment-process\fulfillmentcenter1\out` in file explorer.
-2. Empty the contents if available in above folder.
-3. Navigate to the following url.       
-<http://localhost:8080/ofp/orderHome/>
-4. Click following link in menu. Orders -> Process Orders
-5. Csv file should be created inside the folder, `C:\nuwan\dev\order-fulfillment-process\fulfillmentcenter1\out`
-6. With the Apache camel routing, the same Csv file should be copied in to a folder named test, `C:\nuwan\dev\order-fulfillment-process\fulfillmentcenter1\out\test`
+[https://youtu.be/fZ4LYIfDZnI](https://youtu.be/fZ4LYIfDZnI)

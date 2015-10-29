@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -22,9 +23,14 @@ import com.pluralsight.orderfulfillment.test.TestIntegration;
  * @author Michael Hoffman, Pluralsight
  * 
  */
+
+//Comment @Ignore line in this file, when running 'NewWebsiteOrderRouteTest' manually.
+//Uncomment following @Configuration line in TestIntegration.java file, when running 'NewWebsiteOrderRouteTest' manually.
+//@Configuration
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { TestIntegration.class,
       IntegrationConfig.class })
+@Ignore
 public class NewWebsiteOrderRouteTest {
 
    @Inject

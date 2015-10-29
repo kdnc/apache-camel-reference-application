@@ -14,7 +14,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
  * @author Michael Hoffman, Pluralsight
  * 
  */
-@Configuration
+//Uncomment following @Configuration line in this file, when running 'NewWebsiteOrderRouteTest' manually.
+//Comment @Ignore line in NewWebsiteOrderRouteTest.java file, when running 'NewWebsiteOrderRouteTest' manually.
+//@Configuration
 public class TestIntegration {
 
    /**
