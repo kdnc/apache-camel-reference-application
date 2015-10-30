@@ -384,10 +384,24 @@
 			</plugin>
 			<!-- The WildFly plugin deploys your war to a local WildFly container -->
 			<!-- To use, run: mvn package wildfly:deploy -->
-			<plugin>
+			<!--<plugin>
 				<groupId>org.wildfly.plugins</groupId>
 				<artifactId>wildfly-maven-plugin</artifactId>
 				<version>1.0.2.Final</version>
+			</plugin>-->
+
+			<!-- Tomcat plugin -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<path>/${project.build.finalName}</path>
+					<update>true</update>
+					<url>http://localhost:8080/manager/text</url>
+					<username>admin</username>
+					<password>123</password>
+				</configuration>
 			</plugin>
 		</plugins>
 		<pluginManagement>
