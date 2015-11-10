@@ -138,4 +138,4 @@ To re-load the database:
 
 ### Test scenarios demo video
 
-[Watch video - Test scenario demo](https://youtu.be/fZ4LYIfDZnI)
+[Watch video - Test scenario demo]()
