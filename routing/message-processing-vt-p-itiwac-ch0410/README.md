@@ -42,7 +42,30 @@ The case study was developed using the following:
 	
 ## Project notes
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-from-database-vt-p-itiwac-ch0309/etc/3-apache-camel-intro-integration-m3-slides-page-014.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/2-apache-camel-intro-integration-m2-slides-page-002.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/2-apache-camel-intro-integration-m2-slides-page-003.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/2-apache-camel-intro-integration-m2-slides-page-004.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/2-apache-camel-intro-integration-m2-slides-page-005.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/2-apache-camel-intro-integration-m2-slides-page-006.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-001.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-002.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-003.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-004.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-005.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-006.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-007.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-008.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-009.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-010.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-011.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-012.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-013.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-014.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-015.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-016.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-017.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-018.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/4-apache-camel-intro-integration-m4-slides-page-019.jpg)
 
 ## Server deployment
 
