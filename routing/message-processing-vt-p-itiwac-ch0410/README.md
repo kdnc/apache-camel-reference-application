@@ -1,4 +1,4 @@
-# Configuring a Camel route
+# Message transformation, Bean integration and message processing
 
 ## Table of Contents
 **[Resource location](#resource-location)**  
@@ -38,7 +38,7 @@ The case study was developed using the following:
 - src\main\java\com\pluralsight\orderfulfillment\orderDefaultOrderService.java - processCreateOrderMessage()
 - src\main\java\com\pluralsight\orderfulfillment\config\IntegrationConfig.java
 
-[Watch Video - ]()
+[Watch Video - Important code blocks](https://youtu.be/felXRB88h0I)
 	
 ## Project notes
 
@@ -71,7 +71,7 @@ The case study was developed using the following:
 
 ### Server deployment demo videos
 
-- [Watch Video - Wildfly server deployment](https://www.youtube.com/watch?v=K-SMhqBenIc)
+- [Watch Video - Wildfly server deployment](https://www.youtube.com/watch?v=zzddzPwW8Qw)
 
 Below are the instructions on a per-component basis. The installation assumes Windows, so you will need to follow the instructions that pertain to your OS if you are not using Windows.
 
@@ -109,7 +109,7 @@ To re-load the database:
 
 ### Configuring HawtIO on Tomcat to monitor Camel Contexts demo video
 
-[Watch Video - https://youtu.be/Gv9jnPFvlK8](https://youtu.be/Gv9jnPFvlK8)
+[Watch Video - Configuring HawtIO on Tomcat to monitor Camel Contexts demo video](https://youtu.be/Gv9jnPFvlK8)
 
 ### Start Wildfly
 1. Open a command line and navigate to the root of the Tomcat directory.
@@ -138,4 +138,4 @@ To re-load the database:
 
 ### Test scenarios demo video
 
-[Watch video - Test scenario demo]()
+[Watch video - Test scenario demo](http://www.youtube.com/watch?v=UHRa3_uWkfo)
