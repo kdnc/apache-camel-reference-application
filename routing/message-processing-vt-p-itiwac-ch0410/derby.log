@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Nov 05 16:17:10 IST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0150-d741-df89-00000499d088 
+on database directory memory:D:\NuwanChamara\Projects\reference-applications\apache-camel-reference-application\routing\message-processing-vt-p-itiwac-ch0410\orders with class loader sun.misc.Launcher$AppClassLoader@315e4dbe 
+Loaded from file:/C:/Users/nchamara/.m2/repository/org/apache/derby/derby/10.10.2.0/derby-10.10.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0-b147
+user.dir=D:\NuwanChamara\Projects\reference-applications\apache-camel-reference-application\routing\message-processing-vt-p-itiwac-ch0410
+os.name=Windows NT (unknown)
+os.arch=amd64
+os.version=6.2
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

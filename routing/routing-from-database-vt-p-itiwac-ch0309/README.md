@@ -27,7 +27,7 @@ The case study was developed using the following:
 - Maven 3.0.3
 - Spring 4
 - PostgreSQL 9.3
-- Wildfly 8.1.0.Final
+- Apache Tomcat 7.0.35
 
 ## Important code blocks
 
@@ -159,28 +159,32 @@ To re-load the database:
 1. Log in to `PGAdmin III` or `phppgadmin` and connect using the `orders` user
 2. Open the query tool and run the `create-orders.sql` file, then run the `load-orders.sql file`
 
-### Start Wildfly
-1. Open a command line and navigate to the root of the Wildfly directory.
+### Configuring HawtIO on Tomcat to monitor Camel Contexts demo video
+
+[https://youtu.be/Gv9jnPFvlK8](https://youtu.be/Gv9jnPFvlK8)
+
+### Start Tomcat
+1. Open a command line and navigate to the root of the Tomcat directory.
 2. The following shows the command line to start the server:
 
-        For Linux:   WILDFLY_HOME/bin/startup.sh
-        For Windows: WILDFLY_HOME\bin\startup.bat
+        For Linux:   TOMCAT_HOME/bin/startup.sh
+        For Windows: TOMCAT_HOME\bin\startup.bat
 
 ### Build and Deploy the application
-1. Make sure you have started the Wildfly Server as described above.
+1. Make sure you have started the Tomcat Server as described above.
 2. Open a command line and navigate to the root directory of this example.
 3. Type this command to build and deploy the archive:
 
-        mvn wildfly:deploy  
+        mvn tomcat7:deploy  
 
 4. This will deploy `target/ofp.war` to the running instance of the server.
 
 ### Undeploy the Archive
-1. Make sure you have started the Wildfly Server as described above.
+1. Make sure you have started the Tomcat Server as described above.
 2. Open a command line and navigate to the root directory of this example.
 3. When you are finished testing, type this command to undeploy the archive:
 
-        mvn wildfly:undeploy
+        mvn tomcat7:undeploy
 
 ## Tests
 
