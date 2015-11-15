@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Nov 15 09:24:17 IST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0151-0947-75d3-000008aec440 
+on database directory memory:D:\projects\reference-applications\apache-camel-reference-application\routing\routing-to-jms-queue-vt-p-itiwac-ch0505\orders with class loader sun.misc.Launcher$AppClassLoader@7132c515 
+Loaded from file:/C:/Users/Nuwan/.m2/repository/org/apache/derby/derby/10.10.2.0/derby-10.10.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_45-b18
+user.dir=D:\projects\reference-applications\apache-camel-reference-application\routing\routing-to-jms-queue-vt-p-itiwac-ch0505
+os.name=Windows 8
+os.arch=amd64
+os.version=6.2
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
