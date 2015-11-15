@@ -36,21 +36,31 @@ The case study was developed using the following:
 - src\main\resources\order-fulfillment.properties
 - src\main\java\com\pluralsight\orderfulfillment\config\IntegrationConfig.java
 
-[Watch Video - Important code blocks]()
+[Watch Video - Important code blocks](http://www.youtube.com/watch?v=57kD4IummY8)
 	
 ## Project notes
 
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/2-apache-camel-intro-integration-m2-slides-page-002.jpg)
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/2-apache-camel-intro-integration-m2-slides-page-003.jpg)
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/2-apache-camel-intro-integration-m2-slides-page-004.jpg)
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/2-apache-camel-intro-integration-m2-slides-page-005.jpg)
-![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/message-processing-vt-p-itiwac-ch0410/etc/2-apache-camel-intro-integration-m2-slides-page-006.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/2-apache-camel-intro-integration-m2-slides-page-002.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/2-apache-camel-intro-integration-m2-slides-page-003.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/2-apache-camel-intro-integration-m2-slides-page-004.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/2-apache-camel-intro-integration-m2-slides-page-005.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/2-apache-camel-intro-integration-m2-slides-page-006.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/5-apache-camel-intro-integration-m5-slides-page-001.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/5-apache-camel-intro-integration-m5-slides-page-002.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/5-apache-camel-intro-integration-m5-slides-page-003.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/5-apache-camel-intro-integration-m5-slides-page-004.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/5-apache-camel-intro-integration-m5-slides-page-005.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/5-apache-camel-intro-integration-m5-slides-page-006.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/5-apache-camel-intro-integration-m5-slides-page-007.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/5-apache-camel-intro-integration-m5-slides-page-008.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/5-apache-camel-intro-integration-m5-slides-page-009.jpg)
+![](https://raw.githubusercontent.com/kdnc/apache-camel-reference-application/master/routing/routing-to-jms-queue-vt-p-itiwac-ch0505-p1001/etc/5-apache-camel-intro-integration-m5-slides-page-010.jpg)
 
 ## Server deployment
 
 ### Server deployment demo videos
 
-- [Watch Video - Wildfly server deployment]()
+- [Watch Video - Wildfly server deployment](http://www.youtube.com/watch?v=4vH1nDs_-4U)
 
 Below are the instructions on a per-component basis. The installation assumes Windows, so you will need to follow the instructions that pertain to your OS if you are not using Windows.
 
@@ -117,4 +127,4 @@ To re-load the database:
 
 ### Test scenarios demo video
 
-[Watch video - Test scenarios demo]()
+[Watch video - Test scenarios demo](http://www.youtube.com/watch?v=4PpHkvrNoM0)
